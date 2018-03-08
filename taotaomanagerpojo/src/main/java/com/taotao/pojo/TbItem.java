@@ -2,6 +2,9 @@ package com.taotao.pojo;
 
 import java.util.Date;
 
+/**
+ * 商品表
+ */
 public class TbItem {
     private Long id;
 
