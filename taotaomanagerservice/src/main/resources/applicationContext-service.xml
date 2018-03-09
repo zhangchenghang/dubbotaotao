@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:component-scan base-package="com.taotao.service"/>
+    <!--Dubbo配置-->
+    <!--Dubbo应用程序名  每个程序应该不一样-->
+    <dubbo:application name="taotaomanager-service"/>
+    <!--Dubbo注册中心-->
+    <dubbo:registry protocol="zookeeper" address="192.168.56.108:2181"/>
+    <!--用dubbo的名称在20880端口暴露服务-->
+    <dubbo:protocol port="20880" name="dubbo"/>
+    <!--发布的服务-->
+    <dubbo:service interface="com.taotao.service.ItemService" ref="itemServiceImpl"/>
+</beans>
