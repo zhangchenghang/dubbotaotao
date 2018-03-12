@@ -221,6 +221,7 @@
                 <artifactId>activemq-all</artifactId>
                 <version>${activemq.version}</version>
             </dependency>
+            <!--freemarker-->
             <dependency>
                 <groupId>org.freemarker</groupId>
                 <artifactId>freemarker</artifactId>

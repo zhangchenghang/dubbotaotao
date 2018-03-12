@@ -1,4 +1,4 @@
-package com.taotao.controller;
+package com.taotao.admin.controller;
 
 import com.taotao.pojo.TbItem;
 import com.taotao.service.ItemService;
@@ -13,6 +13,7 @@ public class ItemController {
 
     @Autowired
     private ItemService itemService;
+
 
     @RequestMapping("/item/{itemid}")
     @ResponseBody
